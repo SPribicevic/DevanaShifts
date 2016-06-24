@@ -1,0 +1,31 @@
+addUserToShift:
+    path: /shift/{shift_id}/employee
+    defaults: { _controller: DevanaShiftsBundle:Shifts:addUserToShift }
+    methods: [POST]
+removeUserFomShift:
+    path: /shift/{shift_id}/employee/{employee_id}
+    defaults: { _controller: DevanaShiftsBundle:Shifts:removeUserFromShift }
+    methods: [DELETE]
+getShifts:
+    path: /shift
+    defaults: { _controller: DevanaShiftsBundle:Shifts:getShifts }
+    methods: [GET]
+swapUSer:
+    path: /shift/{shift_id}/swap
+    defaults: { _controller: DevanaShiftsBundle:Demands:swapUser }
+    methods: [POST]
+disapproveSwap:
+    path: /demand/{demand_id}/disapprove
+    defaults: { _controller: DevanaShiftsBundle:Demands:disapproveSwap }
+    methods: [POST]
+approveSwap:
+    path: /demand/{demand_id}/approve
+    defaults: { _controller: DevanaShiftsBundle:Demands:approveSwap }
+    methods: [POST]
+moveEmployee:
+    path: /shift/{shift_id}/move
+    defaults: { _controller: DevanaShiftsBundle:Shifts:moveEmployee }
+    methods: [POST]
+homePage:
+    path: /
+    defaults :  { _controller: DevanaShiftsBundle:Shifts:homePage}
